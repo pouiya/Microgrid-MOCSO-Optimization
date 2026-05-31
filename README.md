@@ -1,3 +1,4 @@
+Note: The manuscript associated with this code is currently under peer review. Formal citation details will be updated here immediately upon the paper's publication.
 # Multi-Objective Microgrid Energy Management Optimization
 
 This repository contains the complete Python source code for the paper:
