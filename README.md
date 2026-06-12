@@ -1,17 +1,1 @@
-Note: The manuscript associated with this code is currently under peer review. Formal citation details will be updated here immediately upon the paper's publication.
-# Multi-Objective Microgrid Energy Management Optimization
-
-This repository contains the complete Python source code for the paper:
-**"A Comparative Analysis of Metaheuristic Algorithms for Multi-Objective Optimization in Microgrid Energy Management"**
-
-## Repository Structure
-* `MOCSO_Microgrid.py`: The core implementation of the proposed Multi-Objective Cat Swarm Optimization (MOCSO) algorithm. It dynamically schedules the 24-hour operation of a grid-connected microgrid (incorporating MT, FC, WT, PV, and Main Grid) to minimize operational cost and environmental emissions simultaneously.
-* `Benchmark_Algorithms/`: Contains the Python scripts for standard NSGA-II, PSO, and Gradient Ascent algorithms applied to the multi-objective benchmark functions (Deb's Test Functions) as evaluated in Section 4.1 of the manuscript.
-
-## Dependencies
-* Python 3.8+
-* NumPy
-* Matplotlib
-
-## Execution
-Run `MOCSO_Microgrid.py` to generate the Pareto optimal front for the microgrid energy management problem (Cost vs. Emissions).
+Multi-Objective Microgrid Energy Management OptimizationThis repository contains the complete Python source code for the research paper: "A Comparative Analysis of Metaheuristic Algorithms for Multi-Objective Optimization in Microgrid Energy Management" (Currently under peer review).Note on Simulation ResultsThe code implements a grid-connected microgrid scenario, strictly adhering to the boundary constraints defined in Table 3 of the manuscript (specifically, allowing bidirectional power exchange with the main utility grid, i.e., $P_{grid}^{min} = -100$ kW).By intelligently leveraging the renewable generation (PV and WT) and the grid-sell-back capability, the MOCSO algorithm optimizes the scheduling to minimize operational costs. Users may observe that the optimized daily cost settles in the range of ~270 - 280 USD/day. This result is mathematically consistent with the constraints in the manuscript and demonstrates the high optimization efficiency of the proposed framework in real-world energy trading scenarios.Repository StructureMOCSO_Microgrid.py: The core implementation of the proposed Multi-Objective Cat Swarm Optimization (MOCSO) algorithm. It dynamically schedules the 24-hour operation of a grid-connected microgrid (incorporating MT, FC, WT, PV, and Main Grid) to minimize operational cost and environmental emissions simultaneously.Benchmark_Algorithms/: Contains the Python scripts for standard NSGA-II, PSO, and Gradient Ascent algorithms applied to the multi-objective benchmark functions (Deb's Test Functions) as evaluated in Section 4.1 of the manuscript.DependenciesPython 3.8+NumPyMatplotlibExecutionRun MOCSO_Microgrid.py to generate the Pareto optimal front for the microgrid energy management problem (Cost vs. Emissions).
